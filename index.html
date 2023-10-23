@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sound Player</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body onload="initJSVariables();">
+    <div id="progress">0%</div>
+    <div class="pb-border">
+        <div id="pb" class="progressbar"></div>
+    </div>
+    <button onclick="progress();">Start</button>
+    <button onclick="clearInterval(progressInterval);">stop</button>
+    <button onclick="reset();">reset</button>
+    <audio id="audioFile" autoplay src="./mp3/music0.mp3"></audio>
+</body>
+</html>

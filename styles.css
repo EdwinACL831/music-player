@@ -1,0 +1,12 @@
+.pb-border {
+    width: 100%;
+    height: 20px;
+    border: 1px solid;
+    margin-bottom: 4px;
+}
+
+.progressbar {
+    background-color: green;
+    height: inherit;
+    width: 0%;
+}
