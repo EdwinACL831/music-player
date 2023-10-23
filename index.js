@@ -29,3 +29,8 @@ function reset() {
     progressBar.style.width = zeroP;
     clearInterval(progressInterval);
 }
+
+function stop() {
+    clearInterval(progressInterval);
+    audioFile.pause();
+}
