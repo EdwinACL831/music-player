@@ -8,14 +8,23 @@ function initJSVariables() {
     progressElement = document.getElementById("progress");
     progressBar = document.getElementById("pb");
     audioFile = document.getElementById("audioFile");
+    printAudioDuration(audioFile);
     currentProgress = parseInt(progressElement.innerHTML);
+
+}
+
+function printAudioDuration(audioFile) {
+    let audioDuration = audioFile.duration;
+    document.getElementById("audio-duration").innerHTML = audioDuration;
 }
 
 function progress() {
     audioFile.play()
+    let steps = 100;
+    let interval = audioFile.duration / steps;
     progressInterval = setInterval(() => {
         if(currentProgress < 100) {
-            currentProgress += 20;
+            currentProgress += interval;
             progressElement.innerHTML = currentProgress + '%';
             progressBar.style.width = currentProgress + '%';
         }
