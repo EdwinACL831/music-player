@@ -100,4 +100,10 @@ button {
         height: 3vh;
         width: 3vh;
     }
+    
+    &[class=start]:hover,
+    &[class=reset]:hover,
+    &[class=stop]:hover {
+        background-color: white;
+    }
 }
