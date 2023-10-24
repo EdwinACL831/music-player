@@ -36,7 +36,7 @@ function reset() {
     // restarts the song from the beginning
     audioFile.currentTime = 0;
     // Stop moving the progressbar un the GUI
-    clearInterval(progressInterval);    
+    // clearInterval(progressInterval);    
 }
 
 function stop() {

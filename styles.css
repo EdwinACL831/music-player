@@ -1,12 +1,23 @@
 /* General Page styling */
+html,
 body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    height: 100%;
     margin: 0;
     display: grid;
     grid-template-areas: 
-        'sb m m m m m m m m'
-        'sb m m m m m m m m'
-        'sb m m m m m m m m'
-        'f f f f f f f f f';
+        'sb m m m m m m m m m'
+        'sb m m m m m m m m m'
+        'sb m m m m m m m m m'
+        'sb m m m m m m m m m'
+        'sb m m m m m m m m m'
+        'sb m m m m m m m m m'
+        'f f f f f f f f f f';
 }
 
 /* Side bar */
