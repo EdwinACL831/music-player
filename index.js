@@ -1,16 +1,11 @@
 let progressInterval;
-let progressElement;
 let progressBar;
 let currentProgress;
 let audioFile;
 
 function initJSVariables() {
-    progressElement = document.getElementById("progress");
     progressBar = document.getElementById("pb");
     audioFile = document.getElementById("audioFile");
-    printAudioDuration(audioFile);
-    currentProgress = parseInt(progressElement.innerHTML);
-
 }
 
 function printAudioDuration(audioFile) {
@@ -18,14 +13,16 @@ function printAudioDuration(audioFile) {
     document.getElementById("audio-duration").innerHTML = audioDuration;
 }
 
+function printAudioCurrentTime(audioFile) {
+    document.getElementById("audio-current-time").innerHTML = audioFile.currentTime
+}
+
 function progress() {
     audioFile.play()
-    let steps = 100;
-    let interval = audioFile.duration / steps;
+    let step = 100 / parseInt(audioFile.duration);
     progressInterval = setInterval(() => {
-        if(currentProgress < 100) {
-            currentProgress += interval;
-            progressElement.innerHTML = currentProgress + '%';
+        if(audioFile.currentTime <= audioFile.duration) {
+            currentProgress = 100 * (audioFile.currentTime / audioFile.duration);
             progressBar.style.width = currentProgress + '%';
         }
     }, 1000);
@@ -34,7 +31,6 @@ function progress() {
 function reset() {
     currentProgress = 0;
     let zeroP = currentProgress + '%';
-    progressElement.innerHTML = zeroP;
     progressBar.style.width = zeroP;
     clearInterval(progressInterval);
 }

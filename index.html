@@ -8,14 +8,24 @@
     <script src="index.js"></script>
 </head>
 <body onload="initJSVariables();">
-    <div id="progress">0%</div>
-    <div class="pb-border">
-        <div id="pb" class="progressbar"></div>
-    </div>
-    <button onclick="progress();">Start</button>
-    <button onclick="stop();">stop</button>
-    <button onclick="reset();">reset</button>
-    <audio id="audioFile" autoplay src="./mp3/music0.mp3"></audio>
-    <div id="audio-duration" style="width: 50px; Height: 50px;"></div>
+    <aside></aside>
+    <main></main>
+    <footer>
+        <section class="album"></section>
+        <section class="control">
+            <section title="btn-panel">
+                <button onclick="progress();">Start</button>
+                <button onclick="stop();">stop</button>
+                <button onclick="reset();">reset</button>
+            </section>
+            <section title="audio-panel">
+                <audio id="audioFile" autoplay src="./mp3/music0.mp3"></audio>
+                <div class="pb-border">
+                    <div id="pb" class="progressbar"></div>
+                </div>
+            </section>
+        </section>
+        <section class="icons"></section>
+    </footer>
 </body>
 </html>
