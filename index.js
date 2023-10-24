@@ -17,7 +17,7 @@ function printAudioCurrentTime(audioFile) {
     document.getElementById("audio-current-time").innerHTML = audioFile.currentTime
 }
 
-function progress() {
+function start() {
     audioFile.play();
     // This code block is to filling the progress bar in the GUI.
     // this is executed each 1000ms until a clearInterval(progressInterval) call happens
