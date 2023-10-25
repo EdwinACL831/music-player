@@ -41,6 +41,27 @@ aside {
 main {
     grid-area: m;
     background-color: grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div[title=card] {
+    flex-direction: column;
+    display: flex;
+    width: 17vw;
+    height: 22vh;
+    background-color: red;
+
+    & > img {
+        background-color: blue;
+        flex-grow: 1;
+        flex-basis: 3vh;
+    }
+
+    & > div[title=card-info] {
+        align-self: center;
+    } 
 }
 
 /* footer */
@@ -96,7 +117,7 @@ div#total-time {
         --musicbar-color: green;
     }
 
-    width: 80%;
+    flex-basis: 37vw;
     height: 4px;
     background-color: #4d4d4d;
 }
