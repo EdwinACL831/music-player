@@ -14,8 +14,6 @@ body {
 }
 
 body {
-    height: 100%;
-    margin: 0;
     display: grid;
     grid-template-areas: 
         'sb m m m m m m m m m'
@@ -31,7 +29,8 @@ body {
 
 /* Side bar */
 aside {
-    min-height: 39rem;
+    min-width: 6vw;
+    min-height: 22vh;
     height: auto;
     grid-area: sb;
     background-color: black;
@@ -46,24 +45,6 @@ main {
     align-items: center;
 }
 
-div[title=card] {
-    flex-direction: column;
-    display: flex;
-    width: 17vw;
-    height: 22vh;
-    background-color: red;
-
-    & > img {
-        background-color: blue;
-        flex-grow: 1;
-        flex-basis: 3vh;
-    }
-
-    & > div[title=card-info] {
-        align-self: center;
-    } 
-}
-
 /* footer */
 footer {
     grid-area: f;
@@ -76,10 +57,10 @@ footer {
     }
 
     & > section[class=control] {
-        flex-grow: 2;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        align-items: center;
 
         & > section[title=btn-panel] {
             align-self: center;
@@ -97,12 +78,14 @@ section[title=audio-panel] {
     justify-content: space-evenly;
     align-items: center;
     font-size: 14px;
+    min-width: 43vw;
 }
 
 
 div#current-time,
 div#total-time {
-    height: 18px;
+    font-size: max(1.5vh, 12px);
+    max-height: 18px;
 }
 
 /* Progress bar styling */
