@@ -61,6 +61,15 @@ footer {
     }
 }
 
+section[title=audio-panel] {
+    display: flex;
+
+}
+
+div#total-time {
+    color: white;
+}
+
 /* Progress bar styling */
 
 .pb-border,
