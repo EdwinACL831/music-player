@@ -1,3 +1,9 @@
+/* Variables */
+:root {
+    --musicbar-color: white;
+    --musicbtn-color: #b3b3b3;
+}
+
 /* General Page styling */
 html,
 body {
@@ -86,13 +92,21 @@ div#total-time {
 }
 
 .pb-border {
+    &:hover {
+        --musicbar-color: green;
+    }
+
     width: 80%;
     height: 4px;
     background-color: #4d4d4d;
 }
 
 .progressbar {
-    background-color: white;
+    &:hover {
+        --musicbar-color: green;
+    }
+
+    background-color: var(--musicbar-color);
     height: inherit;
     width: 0%;
 }
@@ -101,7 +115,7 @@ button {
     border: 0;
     border-radius: 100%;
     padding: 0;
-    background-color: #b3b3b3;
+    background-color:  var(--musicbtn-color);
 
     &[class=start] {
         font-size: 1vh;
@@ -120,6 +134,6 @@ button {
     &[class=start]:hover,
     &[class=reset]:hover,
     &[class=stop]:hover {
-        background-color: white;
+        --musicbtn-color: white;
     }
 }
