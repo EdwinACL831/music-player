@@ -6,14 +6,17 @@ let progressInterval;           // variable to handle the progressbar filling an
 let progressBar;                // variable that represents the progressbar HTML element
 let currentProgress;            // variable that represents the current progress of the song that is playing
 let audioFile;                  // variable that represents the audio HTML element
-let audioTime                   // variable that represents the audio time in HH:MM:SS format
-let audioCurrentTime            // variable that represents the current audio time in HH:MM:SS format
+let audioTime;                  // variable that represents the audio time in HH:MM:SS format
+let audioCurrentTime;           // variable that represents the current audio time in HH:MM:SS format
+let playBtn;
+let isPlaying = false;          // variable to toogle the button from pause to play and viceversa
 
 function initJSVariables() {
     progressBar = document.getElementById("pb");
     audioFile = document.getElementById("audioFile");
     audioTime = document.getElementById("total-time");
     audioCurrentTime = document.getElementById("current-time");
+    playBtn = document.getElementById("playBtn");
 }
 
 function printAudioDuration(time) {
@@ -62,6 +65,18 @@ function mapFromAudioTimeToHHMMSSFormat(audioTime) {
     }
     return `${hoursStr}:${minsStr}:${secondsStr}`;
     
+}
+
+function toogleStartPauseBtn() {
+    if(!isPlaying) {
+        isPlaying = true;
+        playBtn.innerHTML = 'Pause';
+        start();
+    } else {
+        isPlaying = false;
+        playBtn.innerHTML = 'Play';
+        stop();
+    }
 }
 
 function start() {

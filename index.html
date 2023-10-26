@@ -10,18 +10,14 @@
 <body onload="initJSVariables();">
     <aside></aside>
     <main>
-        <div title="card">
-            <img src=".\img\bg0.png" alt="image1">
-            <div title="card-info">Lorem Ipsum</div>
-        </div>
     </main>
     <footer>
         <section class="album"></section>
         <section class="control">
             <section title="btn-panel">
                 <button class="reset" onclick="reset();">reset</button>
-                <button class="start" onclick="start();">Start</button>
-                <button class="stop" onclick="stop();">stop</button>
+                <button id="playBtn" class="start" onclick="toogleStartPauseBtn();">Start</button>
+                <button class="stop" >next</button>
             </section>
             <section title="audio-panel">
                 <audio id="audioFile" autoplay src="./mp3/music0.mp3"></audio>
