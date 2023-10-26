@@ -41,8 +41,8 @@ main {
     grid-row: 1 / 2;
     background-color: grey;
     display: grid;
-    grid-template-columns: 12% 12% 12% 12%;
-    grid-template-rows: 26% 26% 26% 26% 26%;
+    grid-template-columns: max(12%, 170px) max(12%, 170px) max(12%, 170px) max(12%, 170px);
+    grid-template-rows: max(26%, 50px) 26% 26% 26% 26%;
     gap: 20px 20px;
     padding: 20px;
     background: linear-gradient(0deg, #121212, #303F4E);
@@ -61,6 +61,11 @@ div[title=card] {
     & > div[class=img-container] {
         width: 75%;
         border-radius: 20px;
+    }
+
+    & > div[class=card-text] {
+        color: var(--musicbar-color);
+        min-width: max(76%, 126px);
     }
 }
 
