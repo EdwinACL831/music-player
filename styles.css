@@ -49,8 +49,8 @@ main {
 div[title=card] {
     flex-direction: column;
     display: flex;
-    width: 17vw;
-    height: 22vh;
+    width: 170px;
+    height: 220px;
     background-color: red;
 
     & > img {
