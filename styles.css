@@ -66,6 +66,13 @@ div[title=card] {
     & > div[class=card-text] {
         color: var(--musicbar-color);
         min-width: max(76%, 126px);
+        position: relative;
+
+        & > button {
+            position: absolute;
+            right: 10px;
+            top: 35px;
+        }
     }
 }
 
