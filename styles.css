@@ -2,8 +2,12 @@
 :root {
     --musicbar-color: white;
     --musicbtn-color: #b3b3b3;
+    --main-start-color: #303f4e;
+    --main-end-color: #121212;
+    --card-background: #181818;
     --primarybtn-size: 40px;
     --secondarybtn-size: 30px;
+    --card-borderradius: 20px;
 }
 
 /* General Page styling */
@@ -37,21 +41,37 @@ main {
     grid-row: 1 / 2;
     background-color: grey;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 2fr;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-columns: 12% 12% 12% 12%;
+    grid-template-rows: 26% 26% 26% 26% 26%;
     gap: 20px 20px;
     padding: 20px;
+    background: linear-gradient(0deg, #121212, #303F4E);
+    overflow: auto;
 }
 
 div[title=card] {
     flex-direction: column;
     display: flex;
-    background-color: red;
+    background-color: var(--card-background);
     transition: transform 0.3s ease;
+    border-radius: var(--card-borderradius);
+    align-items: center;
+    padding-top: 20px;
+
+    & > div[class=img-container] {
+        width: 75%;
+        border-radius: 20px;
+    }
 }
 
 div[title=card]:hover {
     transform: scale(1.05);
+    --card-background: #282828;
+}
+
+img {
+    width: 100%;
+    border-radius: 12px;
 }
 
 /* footer */
@@ -147,7 +167,7 @@ button {
     }
 
     &[class=reset],
-    &[class=stop] {
+    &[class=next] {
         font-size: 0.55rem;
         height: var(--secondarybtn-size);
         width: var(--secondarybtn-size);
@@ -155,7 +175,12 @@ button {
     
     &[class=start]:hover,
     &[class=reset]:hover,
-    &[class=stop]:hover {
+    &[class=next]:hover {
         --musicbtn-color: white;
+    }
+
+    &[class=reset]:active,
+    &[class=next]:active {
+        --musicbtn-color: #b3b3b3;
     }
 }
