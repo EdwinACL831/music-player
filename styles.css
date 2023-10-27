@@ -5,9 +5,12 @@
     --main-start-color: #303f4e;
     --main-end-color: #121212;
     --card-background: #181818;
+
     --primarybtn-size: 40px;
     --secondarybtn-size: 30px;
     --card-borderradius: 20px;
+
+    --display-card-btn: none;
 }
 
 /* General Page styling */
@@ -69,6 +72,7 @@ div[title=card] {
         position: relative;
 
         & > button {
+            display: var(--display-card-btn);
             position: absolute;
             right: 10px;
             top: 35px;
@@ -77,8 +81,12 @@ div[title=card] {
 }
 
 div[title=card]:hover {
-    transform: scale(1.05);
     --card-background: #282828;
+    transform: scale(1.05);
+    
+    & > div[class=card-text] > button {
+        --display-card-btn: block;
+    }
 }
 
 img {
