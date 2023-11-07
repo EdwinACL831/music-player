@@ -26,7 +26,7 @@ body {
 
 .left_panel {
     flex-grow: 3;
-    background-image: url('./img/preview.gif');
+    background-image: url('../img/preview.gif');
     background-size: cover;
     padding-left: 15px;
 }
